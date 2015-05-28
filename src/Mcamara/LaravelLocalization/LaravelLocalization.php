@@ -162,6 +162,9 @@ class LaravelLocalization {
             }
         }
 
+        //save locale in session
+        \Session::set('locale', $this->currentLocale);
+
         $this->app->setLocale($this->currentLocale);
 
         return $locale;
